@@ -11,11 +11,13 @@ include: "/views/dept.view.lkml"
 #
  explore: emp_sal {
    join: dept {
+    type: left_outer
      relationship: many_to_one
     sql_on: ${dept.emp_id}.id} = ${emp_sal.id} ;;
   }
 
   join: expence {
+    type: left_outer
     relationship: many_to_one
     sql_on: ${expence.expid}.id} = ${emp_sal.id}.user_id} ;;
   }
