@@ -19,6 +19,6 @@ include: "/views/dept.view.lkml"
   join: expence {
     type: left_outer
     relationship: many_to_one
-    sql_on: ${expence.expid}.id} = ${emp_sal.id}.user_id} ;;
+    sql_on: ${expence.expid}.id} = ${emp_sal.id} ;;
   }
 }
