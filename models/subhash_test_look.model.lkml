@@ -13,12 +13,12 @@ include: "/views/dept.view.lkml"
    join: dept {
     type: left_outer
      relationship: many_to_one
-    sql_on: ${dept.emp_id}.id} = ${emp_sal.id} ;;
+    sql_on: ${dept.emp_id} = ${emp_sal.id} ;;
   }
 
   join: expence {
     type: left_outer
     relationship: many_to_one
-    sql_on: ${expence.expid}.id} = ${emp_sal.id} ;;
+    sql_on: ${expence.expid} = ${emp_sal.id} ;;
   }
 }
